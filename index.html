@@ -167,7 +167,13 @@ td:nth-child(3) {
                     var trabajo = datos.data;
                     console.log(trabajo);
                     trabajo.forEach((x) => {
-                        t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}"><td>${x.Electivo}</td><td>${x.}</td><td>${x.Mención}</td><td>${x.Subgrupo}</td><td>${x.Créditos}</td><td>${x.Área Temática}</td></tr>`;
+                        t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}">
+  <td>${x.Electivo}</td>
+  <td>${x.Mención}</td>
+  <td>${x.Subgrupo}</td>
+  <td>${x.Créditos}</td>
+  <td>${x["Área Temática"]}</td>
+</tr>`;
                     });
                 })
                 .catch((error) => {
