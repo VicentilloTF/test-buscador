@@ -133,16 +133,16 @@ td:nth-child(3) {
             <h1>₍^ >ヮ<^₎ .ᐟ.ᐟ</h1>
             <h2>Electivos UChile</h2>
 
-            <input type="text" id="elInput" placeholder="Filtrar titulos…" />
+            <input type="text" id="elInput" placeholder="Filtrar electivos…" />
             <div id="contenedordetabla">
                 <table>
                     <thead>
                         <tr>
-                            <th>Mención</th>
                             <th>Electivos</th>
-                            <th>Creditos</th>
-                            <th>Area Tematica</th>
+                            <th>Mención</th>
                             <th>Subgrupo</th>
+                            <th>Área Temática</th>
+                            <th>Créditos</th>
                         </tr>
                     </thead>
                     <tbody id="este"></tbody>
@@ -154,7 +154,7 @@ td:nth-child(3) {
 
         <script>
             const t = document.querySelector("#este");
-            const URL = "https://api.myjson.online/v1/records/ba038b85-c1e9-4372-8458-e93497e10839";
+            const URL = "https://api.myjson.online/v1/records/79b42724-6936-4c77-a4b6-0f6d059162f2";
 
             fetch(URL)
                 .then((respuesta) => {
@@ -167,7 +167,7 @@ td:nth-child(3) {
                     var trabajo = datos.data;
                     console.log(trabajo);
                     trabajo.forEach((x) => {
-                        t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}"><td>${x.name}</td><td>${x.title}</td><td>${x.grade}</td><td>${x.category}</td><td>${x.tutor}</td></tr>`;
+                        t.innerHTML += `<tr style="${x.ok == 1 ? "background-color: var(--color-iluminadisimo); color: var(--color-oscurisimo)" : ""}"><td>${x.Electivo}</td><td>${x.}</td><td>${x.Mención}</td><td>${x.Subgrupo}</td><td>${x.Créditos}</td><td>${x.Área Temática}</td></tr>`;
                     });
                 })
                 .catch((error) => {
