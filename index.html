@@ -131,18 +131,18 @@ td:nth-child(3) {
     <body>
         <div id="contenedor">
             <h1>₍^ >ヮ<^₎ .ᐟ.ᐟ</h1>
-            <h2>Proyectos de Título</h2>
+            <h2>Electivos UChile</h2>
 
             <input type="text" id="elInput" placeholder="Filtrar titulos…" />
             <div id="contenedordetabla">
                 <table>
                     <thead>
                         <tr>
-                            <th>Titulad@</th>
-                            <th>Proyecto</th>
-                            <th>Nota</th>
-                            <th>Categoría</th>
-                            <th>Prof. Guía</th>
+                            <th>Mención</th>
+                            <th>Electivos</th>
+                            <th>Creditos</th>
+                            <th>Area Tematica</th>
+                            <th>Subgrupo</th>
                         </tr>
                     </thead>
                     <tbody id="este"></tbody>
@@ -154,7 +154,7 @@ td:nth-child(3) {
 
         <script>
             const t = document.querySelector("#este");
-            const URL = "https://api.myjson.online/v1/records/2ee30830-2124-4382-b707-1a89ede13ea8";
+            const URL = "https://api.myjson.online/v1/records/14a97126-cfc5-41d8-a27b-9b5a95796a29";
 
             fetch(URL)
                 .then((respuesta) => {
